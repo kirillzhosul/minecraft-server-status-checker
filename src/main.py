@@ -6,8 +6,7 @@
 # Impoting modules
 from time import sleep  # Module for sleeping on time before next request.
 from mcstatus import MinecraftServer  # MinecraftServer class for making requests to the server / working with query.
-from plyer import \
-    notification  # Module for working with notification, you may not import this if you dont working with notifications.
+from plyer import notification  # Module for working with notification, you may not import this if you dont working with notifications.
 
 
 # Main function where you can write your own code that will executed when querying server or just default scenario.
@@ -50,6 +49,7 @@ def default_scenario_print(query):
         print("--- --- ----")
 
 
+# Default scenario used to show notification when server changes state.
 def default_scenario_notification(query):
     """ Default scenario used to show notification when server changes state. """
     if server_previous_query is None and query is not None:
